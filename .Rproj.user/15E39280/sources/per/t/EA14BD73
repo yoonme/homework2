@@ -1,0 +1,24 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1556213927051.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "10|27|12|0|\n14|13|23|0|\n20|11|22|0|\n24|18|33|0|\n",
+    "hash" : "3116505271",
+    "id" : "EA14BD73",
+    "lastKnownWriteTime" : 1556215260,
+    "last_content_update" : 1556215260214,
+    "path" : "~/GitHub/homework2/homework2-410773125.Rmd",
+    "project_path" : "homework2-410773125.Rmd",
+    "properties" : {
+        "cursorPosition" : "4,21",
+        "last_setup_crc32" : "8D53DE2Ebb338d19",
+        "scrollLine" : "1",
+        "tempName" : "Untitled2"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

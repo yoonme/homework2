@@ -1,0 +1,139 @@
+---
+title: "Homework2"
+author: "何忠艷"
+date: "April 26, 2019"
+output: html_document
+params:
+  studentID: "410773125"
+  studentName: "何忠艷"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+
+
+```{r}
+
+library(lubridate); library(stringr); library(dplyr)
+
+```
+
+
+```{r data11}
+
+studentRecord <-
+
+  list(
+
+    學號="410073058",
+
+    姓名="王小明",
+
+    性別="男",
+
+    學年平均成績=list(
+
+      一年級=88,
+
+      二年級=90.3,
+
+      三年級=92,
+
+      四年級=95
+
+    )
+
+  )
+
+```
+
+```{r ans11}
+名字(studentRecord)[[4]] <-c("平均成績") 
+名字(studentRecord)
+```
+
+```{r ans12}
+名字(studentRecord)[[4]] <-c("一","二","三","四")
+名字(studentRecord)
+```
+
+
+
+```{r}
+
+library(httr)
+
+commitCheck <- content(GET("https://api.github.com/repos/rstudio/rstudio/commits"))
+
+```
+
+```{r ans21}
+commit8Date <- commitCheck[[8]][["commit"]][["committer"]][["date"]][[1]]
+commit8Date
+```
+
+```{r ans22}
+commit8Date <- ymd_hms(commit8Date)
+commit8TWDate <- with_tz(commit8Date,tz="Asia/Taipei")
+commit8TWDate
+```
+
+```{r ans23}
+length(commitCheck)
+commitno. <- c(1:30)
+commitno.2 <- c("commit")
+vector<-str_c(commitno.2,commitno.)
+names(commitCheck) <- vector
+commitCheck
+```
+
+```{r data14}
+
+library(purrr)
+
+map(commitCheck,~.[[3]][[2]][[3]][[1]]) -> allCommitDatesList
+
+```
+
+```{r ans24}
+allCommitDates <- unlist(allCommitDatesList)
+class(allCommitDates)
+allCommitDates
+```
+
+```{r ans25}
+allCommitDates <- ymd_hms(allCommitDates)
+allCommitDatesTW <- with_tz(allCommitDates,tz="Asia/Taipei")
+allCommitDatesTW
+```
+
+
+
+
+
+
+
+
+
